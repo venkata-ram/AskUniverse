@@ -4,15 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/img_universe">
+    tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/give_options_to_the_universe_it_will_reply"
-        android:textColor="@color/white"
-        android:layout_margin="16dp"/>
+        android:textColor="@android:color/white"
+        android:layout_margin="@dimen/_16sdp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/options_edit_text"
+        android:layout_width="match_parent"
+        android:maxLines="1"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:singleLine="true"
+        android:layout_below="@id/text"
+
+        android:background="@drawable/rounded_edit_text"/>
+    <LinearLayout
+        android:id="@+id/add_clear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/options_edit_text"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_weight=".75"/>
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/_4sdp"
+            android:text="@string/add"
+            android:backgroundTint="@color/dark_blue"/>
+
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:text="@string/clear"
+            android:backgroundTint="@color/dark_blue"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_weight=".75"/>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/options_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_clear_layout"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@android:color/transparent"/>
+    <Button
+        android:id="@+id/ask_universe_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ask Universe"
+        android:layout_below="@id/options_recyclerview"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/dark_blue"/>
+
 
 
 
