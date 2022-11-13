@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             val option = optionsEditText.text.toString()
             options.add(option)
             adapter.setData(options)
-
+            optionsEditText.text?.clear()
         }
 
         clearButton.setOnClickListener {
