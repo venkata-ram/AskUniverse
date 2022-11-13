@@ -62,12 +62,13 @@ class MainActivity : AppCompatActivity() {
     private fun setUpListener() {
         addButton.setOnClickListener {
             val option = optionsEditText.text.toString()
-            options.add(option)
-            adapter.setData(options)
-            optionsEditText.text?.clear()
-            askUniverseButton.visibility = VISIBLE
+            if(option.isNotEmpty()){
+                options.add(option)
+                adapter.setData(options)
+                optionsEditText.text?.clear()
+                askUniverseButton.visibility = VISIBLE
+            }
         }
-
         clearButton.setOnClickListener {
             options.clear()
             adapter.setData(options)
