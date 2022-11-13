@@ -16,6 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/give_options_to_the_universe_it_will_reply"
+        android:textAllCaps="true"
         android:textColor="@android:color/white"
         android:layout_margin="@dimen/_16sdp"
         android:layout_centerHorizontal="true"
@@ -90,7 +91,8 @@
         android:layout_marginEnd="@dimen/_16sdp"
         android:layout_marginBottom="@dimen/_16sdp"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/dark_blue"/>
+        android:backgroundTint="@color/dark_blue"
+        android:visibility="gone"/>
 
 
 

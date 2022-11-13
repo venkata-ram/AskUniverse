@@ -3,6 +3,8 @@ package com.venkatapps.askuniverse
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
@@ -63,11 +65,13 @@ class MainActivity : AppCompatActivity() {
             options.add(option)
             adapter.setData(options)
             optionsEditText.text?.clear()
+            askUniverseButton.visibility = VISIBLE
         }
 
         clearButton.setOnClickListener {
             options.clear()
             adapter.setData(options)
+            askUniverseButton.visibility = GONE
         }
         askUniverseButton.setOnClickListener {
             if (options.isNotEmpty()) {
